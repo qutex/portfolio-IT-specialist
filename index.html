@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио – Власов Данил</title>
+    <style>
+        /* === Общие стили === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 30px 50px rgba(0,0,0,0.3);
+            padding: 40px;
+            animation: fadeInUp 0.8s ease;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* === Шапка === */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #667eea;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header .title {
+            font-size: 1.2rem;
+            color: #555;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* === Секции === */
+        .section {
+            margin-bottom: 35px;
+        }
+        .section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+    display: inline-block;
+    color: #667eea; /* простой фиолетовый */
+    /* Или градиент как цвет невозможно, поэтому сделаем градиентную линию снизу */
+    border-image: linear-gradient(to right, #667eea, #764ba2) 1;
+	}
+        .card {
+            background: #f9f9ff;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(102, 126, 234, 0.2);
+        }
+        .card h3 {
+            margin-bottom: 10px;
+            color: #4a4a6a;
+        }
+        .card p, .card ul {
+            color: #555;
+            line-height: 1.6;
+        }
+        .card ul {
+            padding-left: 20px;
+        }
+        .card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        .card a:hover {
+            border-bottom-color: #667eea;
+        }
+
+        /* === Подвал === */
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #777;
+        }
+        .footer a {
+            color: #667eea;
+            margin: 0 10px;
+        }
+
+        /* === Адаптивность === */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <h1>Власов Данил</h1>
+            <p class="title">Специалист по обеспечению качества | QA Engineer</p>
+        </div>
+
+        <!-- Обо мне -->
+        <div class="section">
+            <h2>👨‍💻 Обо мне</h2>
+            <div class="card">
+                <p>Привет! Я занимаюсь тестированием ПО и обеспечением качества функционирования компьютерных систем. Имею опыт ручного и автоматизированного тестирования веб-приложений и API. Стремлюсь к чистому коду и надёжным продуктам.</p>
+            </div>
+        </div>
+
+        <!-- Проекты -->
+        <div class="section">
+            <h2>🚀 Проекты</h2>
+            <div class="card">
+                <h3>Приложение на Java</h3>
+                <p>Приложение для вычисления линейного и разветвляющегося алгоритма. <a href="#">vlasov_l4.docx</a></p>
+            </div>
+        </div>
+
+        <!-- Опыт и участие -->
+        <div class="section">
+            <h2>📈 Опыт и конференции</h2>
+            <div class="card">
+                <ul>
+		    <li>Учебное подразделение	Колледж АлтГУ, Направление 09.02.07. Информационные системы и программирование</li>
+                    <li>Стажировка в компании «Технологии будущего» – функциональное и регрессионное тестирование</li>
+                    <li>Участие в студенческой конференции «IT-прорыв 2025» с докладом «CI/CD в тестировании»</li>
+                    <li>Воркшоп «Автоматизация на Python» (сертификат)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Контакты -->
+        <div class="section">
+            <h2>📬 Контакты</h2>
+            <div class="card">
+                <p>Email: <a href="mailto:your.email@example.com">ooris203@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/твой-username">github.com/qutex</a></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Данил. Сделано с ❤️ и GitHub Pages</p>
+        </div>
+    </div>
+</body>
+</html>
